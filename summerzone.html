@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-X: hidden;
+        }
+
+        .container {
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .element img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="text">
+
+        <!-- ist row -->
+
+        <div class="element">
+            <img src="images/scroll/vegetable.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/personal care.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/ice cream.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/fruits.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/eggs.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/drinks.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/cut fruits.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/beverages.jpeg" alt="">
+        </div>
+
+        
+        <div class="element">
+            <img src="images/scroll/vegetable.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/personal care.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/ice cream.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/fruits.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/eggs.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/drinks.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/cut fruits.jpeg" alt="">
+        </div>
+        <div class="element">
+            <img src="images/scroll/beverages.jpeg" alt="">
+        </div>
+
+ 
+
+    </div>
+    <!-- <script>
+        let text = document.getElementById("text");
+
+        // stop after 5 seconds
+        setTimeout(() => {
+            text.style.animationPlayState = "paused";
+        }, 5000);
+
+        // resume after 8 seconds
+        setTimeout(() => {
+            text.style.animationPlayState = "running";
+        }, 8000);
+    </script> -->
+</body>
+
+</html>

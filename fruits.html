@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits</title>
+    <link href="css/product.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="homelink">
+        <a href="index.html">HOME</a>
+        <a href="">&nbsp / &nbsp FRESH FRUITS</a>
+    </div>
+    <div class="container" id="products">
+        
+    </div>
+
+</body>
+<script>
+
+    // // Product data (add as many as you want)
+    const products = [
+        { name:"Watermelon Kiran", price:59, image: "images/water.jpg", op1: "1kg", op2: "" },
+        { name:"Apple Red Delicious", price:369, image: "images/apple", op1: "1 kg", op2: "" },
+        { name:"Pears Red SA", price: 239.5, image: "images/pears.jpg", op1: "500 gm", op2: "" },
+        { name:"Pineapple Pc", price:89 , image: "images/pine.jpg", op1: "1 pc", op2: "" },
+        { name:"long papaya", price: 89, image: "images/papaya.webp", op1: "1 kg", op2: "" },
+        { name:"Apple Red Delicious Pack", price: 89, image: "images/red apple.jpeg", op1: "Pack of 4", op2: "" },
+        { name:"Orange Imported Pack", price: 129, image: "images/orange.jpg", op1: "pack of 4", op2: "" },
+        { name:"Apple Royal Gala Pack", price: 199, image: "images/apple royal.jpg", op1: "pack of 4", op2: "" },
+        { name:"Dragon Fruit White", price: 85, image: "images/dragon.png", op1: "1 pc", op2: "" },
+        { name:"Sunmelon", price: 19.5, image: "images/sunmelon.webp", op1: "500 gm", op2: "" },
+        { name:"Papaya Salad", price: 33, image: "images/papaya salad.jpg", op1: "1 pack", op2: "" },
+        { name:"amla", price: 125, image: "images/amla.jpg", op1: "1 kg", op2: "" },
+        { name:"Apple Grany Smith", price: 99.75, image: "images/apple grany.jpeg", op1: "250", op2: "" },
+        { name:"Banana Nendram", price: 9.75, image: "images/banana.png", op1: "250", op2: "" },
+        { name:"Guava (Fruit White)", price: 37, image: "images/guava.jpg", op1: "250", op2: "" },
+       
+
+
+    ];
+
+    // // Select container
+    const container = document.getElementById("products");
+
+    // // Loop and create cards
+    products.forEach((product, index) => {
+        const div = document.createElement("div");
+        div.classList.add("card");
+
+        div.innerHTML = `
+        <img src="${product.image}">
+
+            <h3>${product.name}</h3>
+            <select>
+                <option>${product.op1}</option>    
+                <option>${product.op2}</option>    
+            </select>
+            <div class="price">₹${product.price}</div>
+
+            <button class="add-btn" onclick="addToCart(${index})">+</button>
+            
+        `;
+        container.appendChild(div);
+    });
+
+
+    function addToCart(index) {
+        let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const product = products[index];
+        cart.push(product);  // Add full product object
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${product.name} added to cart!`);  // Optional feedback
+    }
+
+    button.onclick = () => addToCart(index);
+
+</script>
+
+</html>

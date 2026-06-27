@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>FORM</title>
+    <link rel="stylesheet" href="css/formvalidation.css">
+
+</head>
+
+<body>
+    <div class="block" id="logform">
+        <h1>Login</h1>
+        <form action="" id="loginform">
+            <div class="intput">
+                <label for="" class="type">User name</label>
+                <input type="text" id="logusername" placeholder="Enter your name">
+                <div class="error"></div>
+            </div>
+            <div class="intput">
+                <label for="" class="type">Password</label>
+                <input type="text" id="logpassword" placeholder="Enter your password">
+                <div class="error"></div>
+            </div>
+            <button class="but">Login</button>
+            <div class="link">Don't have an account? <span id="register" onclick="register(event)">Register</span></div>
+        </form>
+    </div>
+    <div class="block" id="regform">
+        <h1>REGISTER</h1>
+        <form action="" id="form">
+            <div class="intput">
+                <label class="type">User name</label>
+                <input type="text" id="username" placeholder="Enter your name">
+                <div class="error"></div>
+            </div>
+            <div class="intput">
+                <label class="type">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <div class="error"></div>
+            </div>
+            <div class="intput">
+                <label class="type">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <div class="error"></div>
+            </div>
+            <div class="intput">
+                <label class="type"> Conform password</label>
+                <input type="password" id="cpassword" placeholder="Conform Password">
+                <div class="error"></div>
+            </div>
+            <button class="but">submit</button>
+            <div class="link">Already have an account? <span id="login" onclick="logi(event)">Login</span></div>
+        </form>
+    </div>
+
+</body>
+<script src="js/formvalidation.js"></script>
+
+</html>

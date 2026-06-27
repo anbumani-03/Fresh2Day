@@ -1,0 +1,50 @@
+body {
+    background-color: aquamarine;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto 50px;
+
+
+}
+
+.allprt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(235, 226, 226);
+
+}
+
+.allprt {
+    flex-grow: 1;
+    flex-basis: 200;
+    width: 12.95%;
+    height: 400px;
+    background-color: white;
+    padding: 20px;
+    margin: 15px 7px;
+    border-radius: 6px;
+}
+
+.allprt img {
+    width: 90%;
+    height: 180px;
+
+}
+
+.allprt select{
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}

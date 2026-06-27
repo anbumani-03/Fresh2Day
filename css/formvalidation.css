@@ -1,0 +1,90 @@
+body {
+    /* background:rgba(17, 239, 95,.5); */
+   background: #22e9f0; 
+    background: linear-gradient(72deg, rgba(34, 233, 240, 1) 8%, rgba(25, 227, 190, 1) 49%, rgba(252, 69, 231, 1) 94%);
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.link {
+    font-size: 20px;
+}
+
+.link span {
+    color: blue;
+}
+
+#register,
+#login {
+    cursor: pointer;
+}
+
+.block {
+    background: #5210eb;
+    background: linear-gradient(72deg, rgba(82, 16, 235, 0.5) 7%, rgba(96, 34, 240, .5) 8%, rgba(14, 237, 77, .5) 50%, rgba(5, 137, 232, .5) 100%);
+    width: 300px;
+    min-height: 200px;
+    border-radius: 25px;
+    margin: 50px auto 0 auto;
+    padding: 30px;
+}
+
+.intput {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 20px;
+}
+
+
+.intput input {
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.but {
+    margin: 10px 0;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 12px;
+    width: 100%;
+    cursor: pointer;
+    min-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border: none;
+}
+
+#regform {
+    display: none;
+}
+
+.intput input:focus {
+    outline: 0;
+    border: 3px solid aqua;
+}
+
+.error {
+    color: red;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+.success {
+    color: #0cc477;
+}
+
+.error {
+    color: #c40c0c;
+}

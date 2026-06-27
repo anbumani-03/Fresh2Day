@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atta and Flours</title>
+    <link href="css/product.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="homelink">
+        <a href="index.html">HOME</a>
+        <a href="">&nbsp / &nbsp ATTA & FLOURS</a>
+    </div>
+    <div class="container" id="products">
+
+    </div>
+    <script>
+        const products = [
+            { name: "Aachi Ragi Flour", price: 48, image: "images/atta/aachiragi.jpg", op1: "500 gm", op2: "" },
+            { name: "Aashirvaad Select Atta", price: 84, image: "images/atta/opt_aashirvaad_select_atta_5kg.jpg", op1: "1 kg", op2: "500 gm" },
+            { name: "Aashirvaad Superior MP atta", price: 358, image: "images/atta/superior.jpeg", op1: "5 kg", op2: "" },
+            { name: "Aashirvaad Whole Wheat", price: 116, image: "images/atta/whole.jpg", op1: "2 kg", op2: "" },
+            { name: "Fortune Chakki Fresh Atta", price: 105, image: "images/atta/fortune_chakki_fresh_atta_10_kg.jpg", op1: "1 kg", op2: "" },
+            { name: "Krishna Kozhakkate Idiyappam Flour", price: 72, image: "images/atta/opt_krishna_kozhakkate_idiyappam_flour_500gm.jpg", op1: "500 gm", op2: "" },
+            { name: "Manna Multi Millet Atta", price: 119, image: "images/atta/milletatta.jpg", op1: "1 kg", op2: "" },
+            { name: "Naga Bubbly Bubbly Maida", price: 92, image: "images/atta/anagamaida.jpg", op1: "1 kg", op2: "" },
+            { name: "Naga Refined Wheat Flour", price: 47.5, image: "images/atta/NagaRefinedWheatFlour.jpg", op1: "1 kg", op2: "" },
+            { name: "Naga Double Roasted Sooji", price: 50, image: "images/atta/nagadouble.jpg", op1: "500 gm", op2: "" },
+
+        ];
+        const container = document.getElementById("products");
+
+        products.forEach((product, index) => {
+            const div = document.createElement("div");
+            div.classList.add("card");
+
+            div.innerHTML = `
+               <img src="${product.image}">
+
+            <h3>${product.name}</h3>
+            <select>
+                <option>${product.op1}</option>    
+                <option>${product.op2}</option>    
+            </select>
+            <div class="price">₹${product.price}</div>
+             <button class="add-btn" onclick="addToCart(${index})">+</button>
+            
+            `;
+            container.appendChild(div);
+        });
+
+        function addToCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            const product = products[index];
+            cart.push(product); 
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${product.name} added to cart!`); 
+        }
+
+        button.onclick = () => addToCart(index);
+
+    </script>
+</body>
+
+</html>
