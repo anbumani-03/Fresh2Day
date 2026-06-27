@@ -100,7 +100,7 @@
      cursor: pointer;
  }
 
- .clear-btn,.print button {
+ .clear-btn,.print {
      width: 150px;
      height: 40px;
      display: block;
